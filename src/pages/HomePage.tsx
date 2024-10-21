@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
 
     return (
        
-        <div className="flex flex-col min-h-screen bg-gray-100">
+        <div className="flex flex-col min-h-screen bg-white">
            
             <main className="flex-grow flex p-8 overflow-hidden">
                 <div className="w-full max-w-full overflow-y-auto max-h-[calc(100vh-100px)]">

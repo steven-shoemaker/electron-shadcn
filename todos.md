@@ -1,9 +1,22 @@
 # TODO
 
 - [ ] Implement Bias Mechanism
+- [ ] Implement External Factors into Bias Mechanism
 - [ ] Implement Employee Table View
+- [ ] Implement Event Log View
 - [ ] Implement Initial Employee Data Setting
-- [ ] Implement Additionl Demographic Data
-- [ ] Implement Simulation Component
-- [ ] Implement Simulation Settings Component
-- [ ] Implement Simulation Results Component
+- [ ] Implement Target Employee Population Setting
+- [ ] Implement Additional Demographic Data
+- [ ] Implement Performance / Engagement Survey Simulation
+- [ ] Implement Hierarchy Model 
+- [ ] Implement Job Title Creation System
+- [ ] Implement Job Sourcing Simulation
+- [ ] Implement Job Posting Simulation
+- [ ] Implement Applicant Tracking System Simulation
+- [ ] Implement Interview Process Simulation
+- [ ] Implement Hiring Simulation
+- [ ] Implement Onboarding Simulation
+- [ ] Implement Career Path Simulations
+- [ ] Implement Promotion Simulation, including bias
+- [ ] Implement Termination Simulation
+- [ ] Implement Templates for Configuring Simulations

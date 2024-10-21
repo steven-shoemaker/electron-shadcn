@@ -132,7 +132,7 @@ const EventChart: React.FC<EventChartProps> = ({ data, theme }) => {
       <ChartContainer className="min-h-[200px] w-full" config={chartConfig}>
         <LineChart
           data={aggregateData}
-          margin={{ top: 20, right: 30, left: 20, bottom: 10 }}
+          margin={{ top: 20, right: 5, left: 5, bottom: 10 }}
         >
           <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#bfbfbf" />
           <XAxis

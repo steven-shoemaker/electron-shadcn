@@ -25,7 +25,7 @@ export default function SimulationComponent() {
   } = useSimulation();
 
   return (
-    <div className="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-900 h-full">
+    <div className="flex flex-col md:flex-row bg-white dark:bg-gray-900 h-full">
       <SimulationForm
         dateRange={dateRange}
         setDateRange={setDateRange}

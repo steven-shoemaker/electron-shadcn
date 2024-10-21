@@ -4,7 +4,7 @@ import EventSummary from "@/components/EventSummary";
 import { PieChartComponent, DemographicDataItem } from '@/components/charts/piechart';
 import { EventData, EmployeeEvent } from '@/lib/functions/eventGenerator';
 import { Employee } from '@/lib/interfaces/Employee';
-
+import { Card, CardContent, CardHeader ,CardFooter, CardTitle, CardDescription } from '../ui/card';
 interface SimulationDisplayProps {
   eventData: EventData[];
   employeeEvents: EmployeeEvent[];
@@ -29,7 +29,11 @@ export default function SimulationDisplay({
       {eventData.length > 0 ? (
         <>
           <EventSummary data={eventData} employeeEvents={employeeEvents} employees={employees} theme={theme} />
-          <EventChart data={eventData} theme={theme} />
+          <Card className='shadow-none pl-0 m-0 justify-start'>
+            <CardContent className='p-1 m-1'>
+              <EventChart data={eventData} theme={theme} />
+            </CardContent>
+          </Card>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <PieChartComponent data={genderData} title="Gender Distribution" />
             <PieChartComponent data={ethnicityData} title="Ethnicity Distribution" />
