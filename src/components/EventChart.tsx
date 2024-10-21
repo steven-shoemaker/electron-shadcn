@@ -33,7 +33,7 @@ const EventChart: React.FC<EventChartProps> = ({ data, theme }) => {
     Terminations: 1,
     Promotions: 1,
   });
-  const [aggregation, setAggregation] = useState<AggregationType>('Week');
+  const [aggregation, setAggregation] = useState<AggregationType>('Quarter');
 
   const colors = {
     Hires: '#438ae8',
