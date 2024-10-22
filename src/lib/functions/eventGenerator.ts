@@ -10,6 +10,11 @@ export interface EventData {
   Promotions: number;
 }
 
+export interface DateRange {
+  startDate: Date;
+  endDate: Date;
+}
+
 interface SeasonalityFunctions {
   Hires: SeasonalityFunction;
   Terminations: SeasonalityFunction;
@@ -51,11 +56,11 @@ const eventOccursMultiple = (prob: number, trials: number): number => {
  * Assigns unique IDs to hires and ties terminations/promotions to these IDs.
  */
 export function generateCustomEvents(
-  startDate: Date,
-  endDate: Date,
+  dateRange: DateRange,
   seasonalityFns: SeasonalityFunctions,
   eventRates: EventRates
 ): GeneratedEvents {
+  const { startDate, endDate } = dateRange;
   const dailyEvents: EventData[] = [];
   const employeeEvents: EmployeeEvent[] = [];
   const employees: Employee[] = [];
@@ -165,7 +170,7 @@ export function generateCustomEvents(
     });
   }
 
-  return {
+  return  {
     dailyEvents,
     employeeEvents,
     employees,
