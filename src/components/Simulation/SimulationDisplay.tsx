@@ -37,13 +37,6 @@ export default function SimulationDisplay({
     <Card className={`${expandedChart === id ? 'col-span-3' : ''} transition-all duration-300`}>
       <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle className="text-lg font-medium">{title}</CardTitle>
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={() => setExpandedChart(expandedChart === id ? null : id)}
-        >
-          {expandedChart === id ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
-        </Button>
       </CardHeader>
       <CardContent className="p-4">
         {children}
@@ -86,9 +79,9 @@ export default function SimulationDisplay({
           </TabsTrigger>
         </TabsList>
 
-        <TabsContent value="overview" className="mt-6">
+        <TabsContent value="overview" className="mt-0">
           <div className="grid grid-cols-1 gap-6">
-            <ChartContainer title="Event Timeline" id="timeline">
+            <ChartContainer title="" id="timeline">
               <EventChart data={eventData} theme={theme} />
             </ChartContainer>
           </div>

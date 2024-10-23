@@ -2,7 +2,7 @@
 
 - [X] Implement Bias Mechanism
 - [ ] Implement External Factors into Bias Mechanism
-- [ ] Implement Employee Table View
+- [X] Implement Employee Table View
 - [ ] Implement Event Log View
 - [ ] Implement Initial Employee Data Setting
 - [ ] Implement Target Employee Population Setting
