@@ -85,7 +85,7 @@ export default function SimulationForm({
   return (
     <div className="w-full max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg">
       <CardHeader>
-        <CardTitle className="text-2xl">Workforce Event Simulator</CardTitle>
+        <CardTitle className="text-2xl">Simulation Configuration</CardTitle>
         <CardDescription>Configure your simulation parameters</CardDescription>
       </CardHeader>
 

@@ -1,0 +1,72 @@
+{
+  "organizationTemplates": {
+    "highGrowthTech": {
+      "description": "Lots of hiring, quick promotions",
+      "hiringRate": 0.3,
+      "promotionRate": 0.2
+    },
+    "stableEnterprise": {
+      "description": "Slow movement, structured",
+      "hiringRate": 0.05,
+      "promotionRate": 0.05
+    },
+    "troubledCompany": {
+      "description": "High turnover, low morale",
+      "hiringRate": 0.1,
+      "promotionRate": 0.02,
+      "quitRate": 0.3
+    }
+  },
+  "departmentSetup": {
+    "departments": [
+      {
+        "name": "Engineering",
+        "size": 50,
+        "growthTarget": 0.1,
+        "reportingStructure": "flat",
+        "jobLevels": ["Junior", "Mid", "Senior", "Lead"]
+      },
+      {
+        "name": "Sales",
+        "size": 30,
+        "growthTarget": 0.15,
+        "reportingStructure": "hierarchical",
+        "jobLevels": ["Associate", "Manager", "Director"]
+      }
+    ]
+  },
+  "processSettings": {
+    "applicationFlowRate": 0.2,
+    "interviewPassRate": 0.7,
+    "offerAcceptanceRate": 0.8,
+    "quitRate": 0.1,
+    "promotionVelocity": 0.05
+  },
+  "biasPatterns": {
+    "genderBias": {
+      "techRoles": 0.2,
+      "midLevelPromotions": 0.1
+    },
+    "interviewBias": {
+      "certainSchools": 0.15
+    }
+  },
+  "problemScenarios": {
+    "leakyPipeline": {
+      "description": "Underrepresented groups face higher attrition",
+      "attritionRate": 0.25
+    },
+    "toxicManager": {
+      "description": "Manager causes cascade quits",
+      "quitRate": 0.4
+    },
+    "hypergrowth": {
+      "description": "Rapid growth leads to quality issues",
+      "qualityDropRate": 0.3
+    },
+    "postMerger": {
+      "description": "Chaos following a merger",
+      "disruptionRate": 0.5
+    }
+  }
+}

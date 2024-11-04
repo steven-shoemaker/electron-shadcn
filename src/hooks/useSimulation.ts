@@ -3,6 +3,7 @@ import { useSimulationConfig, EventType } from './useSimulationConfig';
 import { useSimulationProcessing } from './useSimulationProcessing';
 import { SeasonalityFunction, noSeasonality, sineSeasonality, quarterlySeasonality, holidaySeasonality, summerSlumpSeasonality } from '../lib/functions/seasonality';
 import { EventRates } from '../lib/functions/eventGenerator';
+import simulationConfig from '../config/simulationConfig.json';
 
 const seasonalityOptions: Record<string, SeasonalityFunction> = {
   none: noSeasonality,
@@ -85,6 +86,25 @@ export default function useSimulation() {
       setEventRates(prev => ({ ...prev, [field]: num / 100 }));
     }
   };
+
+  // Initialize simulation state from configuration
+  const initializeFromConfig = () => {
+    const { organizationTemplates, departmentSetup, processSettings, biasPatterns, problemScenarios } = simulationConfig;
+
+    // Example: Set initial event rates from a selected organization template
+    const selectedTemplate = organizationTemplates.highGrowthTech;
+    setEventRates({
+      hireRate: selectedTemplate.hiringRate,
+      terminationRate: processSettings.quitRate,
+      promotionRate: selectedTemplate.promotionRate,
+    });
+
+    // Set biases and other configurations as needed
+    // ...
+  };
+
+  // Call the initialization function
+  initializeFromConfig();
 
   return {
     dateRange,

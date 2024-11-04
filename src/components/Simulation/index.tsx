@@ -37,7 +37,7 @@ export default function SimulationComponent() {
       <header className="border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800 p-4">
         <div className="flex justify-between items-center max-w-screen-2xl mx-auto">
           <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-            Workforce Event Simulator
+            Peoplesets Simulator
           </h1>
           <div className="flex items-center gap-4">
             <Button
